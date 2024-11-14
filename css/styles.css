@@ -16,21 +16,27 @@
 }
 
 body {
-    background-image: url(../img/1.png);
+    background-image: url(../img/fondo1.png);
     background-repeat: no-repeat;
     background-size: cover;
+    overflow-x: hidden;
 }
+
 
 .title {
     font-family: Title;
     font-size: 10vh;
     position: absolute;
     top: -5%;
-    /* Ajusta la posición vertical según sea necesario */
-    left: 50%;
-    /* Centra horizontalmente */
+    left: 42.5%;
     transform: translateX(-50%);
+}
 
+.logo {
+    position: absolute;
+    top: -3%;
+    right: -3%;
+    height: 40vh;
 }
 
 .imagen .img {
@@ -43,7 +49,7 @@ body {
     position: absolute;
     font-size: 7vh;
     top: 35%;
-    left: 30%;
+    left: 25%;
     transform: translate(-50%, -50%);
     padding: 10px;
     color: var(--blanco);
@@ -60,11 +66,19 @@ body {
     text-align: center;
 }
 
+.precio {
+    font-family: Title;
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    font-size: 8vh;
+}
+
 .text {
     font-family: nombre;
     position: absolute;
     top: 80%;
-    left: 30%;
+    left: 25%;
     transform: translate(-50%, -50%);
     padding: 10px;
     color: var(--blanco);
@@ -72,6 +86,22 @@ body {
 }
 
 .img {
-    margin-left: 20vh;
+    margin-left: 10vh;
     height: 80vh;
+}
+
+/* Historia */
+.historia {
+    top: 100%;
+    z-index: 1;
+    position: absolute;
+}
+
+.title,
+.logo,
+.titulo,
+.nombre,
+.text {
+    z-index: 2;
+    position: absolute;
 }
