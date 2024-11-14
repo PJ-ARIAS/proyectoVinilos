@@ -16,27 +16,41 @@
 }
 
 body {
-    background-image: url(../img/fondo1.png);
+    background-image: url(../img/fondoAbba.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     overflow-x: hidden;
+    /* para que historia que abajo */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
-
 
 .title {
     font-family: Title;
     font-size: 10vh;
-    position: absolute;
     top: -5%;
     left: 42.5%;
     transform: translateX(-50%);
 }
 
-.logo {
-    position: absolute;
-    top: -3%;
-    right: -3%;
-    height: 40vh;
+.logos {
+    display: flex;
+    /* Cambia la dirección a columna para alinearlos verticalmente */
+    flex-direction: column;
+    /* Alinea verticalmente los logos */
+    align-items: center;
+    right: 5%;
+}
+
+.logos img {
+    width: 10vh;
+    height: auto;
+    margin: 40px 0;
+}
+
+.logos img .logo {
+    height: 20vh;
 }
 
 .imagen .img {
@@ -44,9 +58,14 @@ body {
     margin-top: 20vh;
 }
 
+/* tamaño especifico para el main logo */
+.logos .logo {
+    height: 20vh;
+    width: auto;
+}
+
 .titulo {
     font-family: Title;
-    position: absolute;
     font-size: 7vh;
     top: 35%;
     left: 25%;
@@ -58,9 +77,8 @@ body {
 
 .nombre {
     font-family: nombre;
-    position: absolute;
     top: 20%;
-    left: 20%;
+    left: 15%;
     transform: translate(-50%, -50%);
     padding: 10px;
     text-align: center;
@@ -74,10 +92,10 @@ body {
     font-size: 8vh;
 }
 
-.text {
+.descripcion {
     font-family: nombre;
     position: absolute;
-    top: 80%;
+    top: 77%;
     left: 25%;
     transform: translate(-50%, -50%);
     padding: 10px;
@@ -91,17 +109,46 @@ body {
 }
 
 /* Historia */
+.imagen2 {
+    background-image: url('../img/historia1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+    color: white;
+    position: relative;
+    /* con el display-flex del  body esto queda abajo */
+    margin-top: 50%;
+}
+
 .historia {
-    top: 100%;
-    z-index: 1;
-    position: absolute;
+    margin-left: 5%;
+}
+
+.bio {
+    font-family: nombre;
+    text-align: left;
+    margin-top: 5%;
+    font-size: 3vh;
+    width: 800px;
+}
+
+.title2 {
+    font-family: Title;
+    font-size: 10vh;
+
+}
+
+.text {
+    color: var(--blanco);
 }
 
 .title,
-.logo,
+.logos,
 .titulo,
 .nombre,
-.text {
+.descripcion {
     z-index: 2;
     position: absolute;
 }
+
